@@ -1,0 +1,133 @@
+/*
+  RYP Golf — Design Tokens
+  Import this file in your app's global CSS (e.g., globals.css).
+  All brand colors, radii, shadows, and glass utilities live here.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ── Brand Colors ─────────────────────────────────────────── */
+  --ryp-green:        #00af51;
+  --ryp-green-light:  #00d463;
+  --ryp-green-dark:   #008a40;
+  --ryp-green-muted:  rgba(0, 175, 81, 0.15);
+
+  --ryp-yellow:       #f4ee19;
+  --ryp-yellow-light: #f9f55a;
+  --ryp-yellow-dark:  #c9c310;
+  --ryp-yellow-muted: rgba(244, 238, 25, 0.15);
+
+  --ryp-black:        #000000;
+  --ryp-surface-1:    #0a0a0a;
+  --ryp-surface-2:    #111111;
+  --ryp-surface-3:    #1a1a1a;
+  --ryp-surface-4:    #222222;
+
+  --ryp-white:        #ffffff;
+  --ryp-gray-100:     #f5f5f5;
+  --ryp-gray-200:     #e5e5e5;
+  --ryp-gray-300:     #d4d4d4;
+  --ryp-gray-400:     #a3a3a3;
+  --ryp-gray-500:     #737373;
+  --ryp-gray-600:     #525252;
+  --ryp-gray-700:     #404040;
+  --ryp-gray-800:     #262626;
+
+  /* ── Semantic Colors ──────────────────────────────────────── */
+  --ryp-success:      var(--ryp-green);
+  --ryp-warning:      var(--ryp-yellow);
+  --ryp-danger:       #ef4444;
+  --ryp-danger-muted: rgba(239, 68, 68, 0.15);
+  --ryp-info:         #3b82f6;
+  --ryp-info-muted:   rgba(59, 130, 246, 0.15);
+
+  /* ── Typography ───────────────────────────────────────────── */
+  --ryp-font-heading: 'Raleway', system-ui, sans-serif;
+  --ryp-font-body:    'Work Sans', system-ui, sans-serif;
+  --ryp-font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ── Spacing / Radii ──────────────────────────────────────── */
+  --ryp-radius-sm:  4px;
+  --ryp-radius-md:  8px;
+  --ryp-radius-lg:  12px;
+  --ryp-radius-xl:  16px;
+  --ryp-radius-2xl: 24px;
+
+  /* ── Glassmorphism ────────────────────────────────────────── */
+  --ryp-glass-bg:           rgba(255, 255, 255, 0.04);
+  --ryp-glass-bg-hover:     rgba(255, 255, 255, 0.07);
+  --ryp-glass-border:       rgba(255, 255, 255, 0.08);
+  --ryp-glass-border-hover: rgba(255, 255, 255, 0.14);
+  --ryp-glass-blur:         12px;
+
+  --ryp-glass-green-bg:     rgba(0, 175, 81, 0.08);
+  --ryp-glass-green-border: rgba(0, 175, 81, 0.20);
+
+  --ryp-glass-yellow-bg:     rgba(244, 238, 25, 0.06);
+  --ryp-glass-yellow-border: rgba(244, 238, 25, 0.18);
+
+  /* ── Shadows ──────────────────────────────────────────────── */
+  --ryp-shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.4);
+  --ryp-shadow-md:   0 4px 12px rgba(0, 0, 0, 0.5);
+  --ryp-shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.6);
+  --ryp-shadow-glow-green:  0 0 20px rgba(0, 175, 81, 0.25);
+  --ryp-shadow-glow-yellow: 0 0 20px rgba(244, 238, 25, 0.20);
+
+  /* ── Transitions ──────────────────────────────────────────── */
+  --ryp-transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ryp-transition-base:   200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ryp-transition-slow:   300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Base Styles ──────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ryp-font-body);
+  background-color: #000000;
+  color: var(--ryp-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ryp-font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ── Glass Utility Classes ────────────────────────────────────── */
+.ryp-glass {
+  background: var(--ryp-glass-bg);
+  border: 1px solid var(--ryp-glass-border);
+  backdrop-filter: blur(var(--ryp-glass-blur));
+  -webkit-backdrop-filter: blur(var(--ryp-glass-blur));
+}
+
+.ryp-glass-hover:hover {
+  background: var(--ryp-glass-bg-hover);
+  border-color: var(--ryp-glass-border-hover);
+}
+
+.ryp-glass-green {
+  background: var(--ryp-glass-green-bg);
+  border: 1px solid var(--ryp-glass-green-border);
+  backdrop-filter: blur(var(--ryp-glass-blur));
+  -webkit-backdrop-filter: blur(var(--ryp-glass-blur));
+}
+
+.ryp-glass-yellow {
+  background: var(--ryp-glass-yellow-bg);
+  border: 1px solid var(--ryp-glass-yellow-border);
+  backdrop-filter: blur(var(--ryp-glass-blur));
+  -webkit-backdrop-filter: blur(var(--ryp-glass-blur));
+}
+
+/* ── Focus Ring (accessibility) ───────────────────────────────── */
+.ryp-focus-ring:focus-visible {
+  outline: 2px solid var(--ryp-green);
+  outline-offset: 2px;
+}

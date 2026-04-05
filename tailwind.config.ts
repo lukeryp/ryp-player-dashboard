@@ -6,7 +6,7 @@ const config: Config = {
   darkMode: 'class',
   content: [
     './src/**/*.{ts,tsx}',
-    '../ryp-ui/src/**/*.{ts,tsx}',
+    './packages/ryp-ui/src/**/*.{ts,tsx}',
   ],
 };
 

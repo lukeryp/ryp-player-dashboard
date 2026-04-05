@@ -1,0 +1,38 @@
+{
+  "name": "@ryp/ui",
+  "version": "0.1.0",
+  "description": "Shared component library for all RYP Golf applications",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme": "./src/theme/index.ts",
+    "./components/*": "./src/components/*/index.tsx",
+    "./utils/*": "./src/utils/*.ts",
+    "./tailwind": "./src/theme/tailwind.config.ts",
+    "./styles": "./src/theme/tokens.css"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "peerDependencies": {
+    "next": ">=14.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "recharts": "^2.10.0",
+    "zod": "^3.22.4",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  }
+}
