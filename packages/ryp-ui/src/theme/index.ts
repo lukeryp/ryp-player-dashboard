@@ -1,6 +1,3 @@
-export { default as rypTailwindConfig } from './tailwind.config';
-
-/** RYP brand color constants — use in JS/TS where CSS vars aren't available (e.g. Recharts fills) */
 export const RYP_COLORS = {
   green:       '#00af51',
   greenLight:  '#00d463',
@@ -15,22 +12,27 @@ export const RYP_COLORS = {
   surface4:    '#222222',
   danger:      '#ef4444',
   info:        '#3b82f6',
-  gray400:     '#a3a3a3',
-  gray500:     '#737373',
-  gray600:     '#525252',
-  gray700:     '#404040',
   white:       '#ffffff',
+  gray100:     '#f3f4f6',
+  gray200:     '#e5e7eb',
+  gray300:     '#d1d5db',
+  gray400:     '#9ca3af',
+  gray500:     '#6b7280',
+  gray600:     '#4b5563',
+  gray700:     '#374151',
+  gray800:     '#1f2937',
+  gray900:     '#111827',
 } as const;
 
 export type RypColor = keyof typeof RYP_COLORS;
 
-/** Chart color palette — consistent series colors across all apps */
-export const CHART_COLORS = [
-  RYP_COLORS.green,
-  RYP_COLORS.yellow,
-  '#3b82f6',
-  '#a855f7',
-  '#f97316',
-  '#06b6d4',
-  '#ec4899',
-] as const;
+export const CHART_COLORS: string[] = [
+  '#00af51', // ryp-green
+  '#f4ee19', // ryp-yellow
+  '#00d463', // ryp-green-light
+  '#3b82f6', // info blue
+  '#ef4444', // danger red
+  '#c9c310', // ryp-yellow-dark
+  '#008a40', // ryp-green-dark
+  '#60a5fa', // lighter blue
+];
