@@ -5,7 +5,7 @@
  */
 
 // ── Theme ──────────────────────────────────────────────────────────────────
-export { rypTailwindConfig, RYP_COLORS, CHART_COLORS } from './theme';
+export { RYP_COLORS, CHART_COLORS } from './theme';
 export type { RypColor } from './theme';
 
 // ── Utility ────────────────────────────────────────────────────────────────
